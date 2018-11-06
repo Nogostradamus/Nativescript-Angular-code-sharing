@@ -1,7 +1,13 @@
 {
   "name": "movies",
   "nativescript": {
-    "id": "org.nativescript.movies"
+    "id": "org.nativescript.movies",
+    "tns-ios": {
+      "version": "5.0.0"
+    },
+    "tns-android": {
+      "version": "5.0.0"
+    }
   },
   "version": "0.0.0",
   "scripts": {
@@ -30,7 +36,7 @@
     "nativescript-theme-core": "~1.0.4",
     "reflect-metadata": "~0.1.8",
     "rxjs": "^6.0.0",
-    "tns-core-modules": "~4.2.0",
+    "tns-core-modules": "^5.0.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
