@@ -2,6 +2,6 @@
 <StackLayout  class="p-20">
     <StackLayout *ngFor="let movie of movies"
     [nsRouterLink]="['/detail', movie.id]">
-        <Label text="{{ movie.title }}" class="h1 text-center" textWrap="true"></Label>
+    <Image [src]="mediaUrl + movie.img" width="100"></Image>
     </StackLayout>
 </StackLayout>
