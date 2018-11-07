@@ -1,6 +1,7 @@
 <ActionBar title="List Of Movies"></ActionBar>
 <StackLayout  class="p-20">
-    <StackLayout *ngFor="let movie of movies">
+    <StackLayout *ngFor="let movie of movies"
+    [nsRouterLink]="['/detail', movie.id]">
         <Label text="{{ movie.title }}" class="h1 text-center" textWrap="true"></Label>
     </StackLayout>
 </StackLayout>

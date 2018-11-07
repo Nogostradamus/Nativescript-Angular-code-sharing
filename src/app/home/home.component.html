@@ -3,7 +3,8 @@
   <h1> List of Movies</h1>
 </div>
 <ul>
-  <li *ngFor="let movie of movies">
+  <li *ngFor="let movie of movies"
+   [routerLink]="['/detail', movie.id]">
     <h2>{{ movie.title }}</h2>
   </li>
 </ul>
