@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+    Brown Colors:
+
+    dark: #83502e;
+    medium:  #bd7e4a;
+    light: #d2a56d;
+*/
+html {
+    background-color: #83502e;
+    padding: 50px;
+}
+h1 {
+    color: #d2a56d;
+}

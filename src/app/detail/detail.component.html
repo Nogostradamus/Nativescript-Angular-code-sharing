@@ -1,8 +1,7 @@
 <div *ngIf="movie">
-  <img [src]="mediaUrl + movie.img"
-  style="float: left; margin-right: 20px;"/>
-  <h2>{{movie.title}} ({{movie.year}})</h2>
+  <img [src]="mediaUrl + movie.img"/>
+  <h1>{{movie.title}} ({{movie.year}})</h1>
   <p>{{movie.desc}}</p>
-  <h1>Average rating: {{movie.avg_rating}}</h1>
+  <h2>Average rating: {{movie.avg_rating}}</h2>
 </div>
 

@@ -1,0 +1,11 @@
+
+img {
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #bd7e4a;
+}
+img:hover {
+    cursor: pointer;
+    border: 3px solid #d2a56d;
+}
