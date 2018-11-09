@@ -1,5 +1,5 @@
 <ActionBar title="List Of Movies"></ActionBar>
-<StackLayout  class="p-20">
+<StackLayout class="p-20 page">
     <StackLayout *ngFor="let movie of movies"
     [nsRouterLink]="['/detail', movie.id]">
     <Image [src]="mediaUrl + movie.img" width="100"></Image>
