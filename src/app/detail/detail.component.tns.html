@@ -1,11 +1,17 @@
-<ActionBar title="{{movie.title}} ({{ movie.year }})"></ActionBar>
-<StackLayout  class="p-20 page">
-    <StackLayout>
-        <Image [src]="mediaUrl + movie.img" width="200"></Image>
-    
-         <Label text="{{ movie.desc }}" class="text-center"
-         textWrap="true"></Label>
-         <Label text="Average Rating: {{ movie.avg_rating }}"
-         class="h1 text-center" textWrap="true"></Label>
-    </StackLayout>
-</StackLayout>
+<ActionBar title="{{movie.title}} ({{ movie.year }})">
+    <NavigationButton text="" android.systemIcon="ic_menu_back"
+        (tap)="backClicked()"></NavigationButton>
+</ActionBar>
+<GridLayout class="p-20 page">
+    <ScrollView>
+        <StackLayout orientation="vertical">
+            <Image [src]="mediaUrl + movie.img" class="m-15"></Image>
+        
+            <Label text="{{ movie.desc }}" class="text-center"
+            textWrap="true"></Label>
+            <Label text="Average Rating: {{ movie.avg_rating }}"
+            class="h1 text-center" textWrap="true"></Label>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
+
