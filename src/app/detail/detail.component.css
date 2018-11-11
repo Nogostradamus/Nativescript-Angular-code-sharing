@@ -8,3 +8,12 @@ p {
 h2 {
     color: #d2a56d;
 }
+button {
+    background-color: #d2a56d;
+    color: #83502e;
+    padding: 5px;
+    font-size: 16px;
+    border: #83502e;
+    border-radius: 5px;
+    cursor: pointer;
+}
