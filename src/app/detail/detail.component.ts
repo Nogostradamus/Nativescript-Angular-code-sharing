@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { GlobalsService } from '../globals.service';
-import { RouterExtensions } from 'nativescript-angular';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-detail',
@@ -18,7 +18,7 @@ export class DetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private api: ApiService,
     private globals: GlobalsService,
-    private routerExt: RouterExtensions) {
+    private location: Location) {
       this.mediaUrl = this.globals.getBaseUrl() + '/media/';
     }
 
@@ -35,10 +35,10 @@ export class DetailComponent implements OnInit {
       error => {
         console.log(error);
       }
-    )
+    );
   }
   backClicked() {
-    this.routerExt.backToPreviousPage();
+    this.location.back();
   }
 
 }
