@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { GlobalsService } from '../globals.service';
@@ -14,6 +14,7 @@ export class DetailComponent implements OnInit {
 
   movie;
   mediaUrl: string;
+  @Input() idPassed: number;
 
   constructor(private route: ActivatedRoute,
     private api: ApiService,
@@ -24,7 +25,11 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.params['id'];
-    this.getMovie(id);
+    if (id) {
+      this.getMovie(id);
+    } else {
+      this.getMovie(this.idPassed);
+    }
   }
   getMovie(id: number) {
     this.api.getDetailsMovie(id).subscribe(

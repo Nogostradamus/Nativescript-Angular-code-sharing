@@ -3,7 +3,7 @@
   <h1> List of Movies</h1>
 </div>
 <div *ngFor="let movie of movies"
-   [routerLink]="['/detail', movie.id]">
+   (click)="movieClicked(movie)">
    <img [src]="mediaUrl + movie.img" width="100px"/>
 </div>
-
+<ng-template #movieContainer></ng-template>
